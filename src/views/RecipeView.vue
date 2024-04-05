@@ -8,16 +8,17 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-// import { useRecipeStore } from "@/stores/recipes";
+import { useRecipeStore } from "@/stores/recipes";
+import type { Recipe } from "@/types";
 
 // import RecipeSearch from "../components/RecipeSearch.vue";
 // import RecipeList from "../components/RecipeList.vue";
 
 // Setup recipes
-// const recipeStore = useRecipeStore();
-const recipes = ref([]);
-// const recipeData = recipeStore.getRecipes;
-// recipes.value = recipeData;
+const recipeStore = useRecipeStore();
+const recipes = ref<Recipe[]>([]);
+const recipeData = recipeStore.getRecipes;
+recipes.value = recipeData;
 
 const tags = ref([]);
 
