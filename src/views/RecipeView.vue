@@ -1,7 +1,7 @@
 <template>
   <section class="recipe-section">
     <!-- <RecipeSearch :tags="tags" @searchSubmitted="handleSearchSubmitted" /> -->
-    <!-- <RecipeList :recipes="recipes" /> -->
+    <RecipeList :recipes="recipes" />
     <div>Recipe View</div>
   </section>
 </template>
@@ -12,7 +12,7 @@ import { useRecipeStore } from "@/stores/recipes";
 import type { Recipe } from "@/types";
 
 // import RecipeSearch from "../components/RecipeSearch.vue";
-// import RecipeList from "../components/RecipeList.vue";
+import RecipeList from "@/components/RecipeList.vue";
 
 // Setup recipes
 const recipeStore = useRecipeStore();
