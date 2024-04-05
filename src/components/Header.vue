@@ -4,7 +4,7 @@
       <RouterLink to="/">
         <div class="branding">
           <img src="../assets/logo.png" alt="Logo" width="48" height="48" />
-          <h1>Reseptikanta</h1>
+          <h1>Reseptikanta TS</h1>
         </div>
       </RouterLink>
       <ul class="nav-routes">
