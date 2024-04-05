@@ -54,7 +54,7 @@ import { ref } from "vue";
 import RecipeIngredients from "../components/RecipeIngredients.vue";
 import RecipeInstructions from "../components/RecipeInstructions.vue";
 
-import { BASE_IMAGE_PATH } from "@/assets/config.ts";
+import { BASE_IMAGE_PATH } from "@/assets/config";
 
 // Get ID
 const route = useRoute();
@@ -62,7 +62,8 @@ const recipeID = route.params.id;
 
 // Get recipe
 const recipeStore = useRecipeStore();
-const recipe = recipeStore.getRecipeById(+recipeID);
+// TODO: What if recipe is not found? Now just forcing it..
+const recipe = recipeStore.getRecipeById(+recipeID)!;
 
 let servings = ref(recipe.servings);
 
