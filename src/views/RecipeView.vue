@@ -2,7 +2,6 @@
   <section class="recipe-section">
     <!-- <RecipeSearch :tags="tags" @searchSubmitted="handleSearchSubmitted" /> -->
     <RecipeList :recipes="recipes" />
-    <div>Recipe View</div>
   </section>
 </template>
 

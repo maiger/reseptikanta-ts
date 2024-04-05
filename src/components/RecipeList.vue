@@ -2,8 +2,7 @@
   <section class="recipe-list-section">
     <ul>
       <li v-for="recipe in recipes" :key="recipe.id">
-        <!-- <RecipeListItem :recipe="recipe" /> -->
-        <div>{{ recipe.id }}</div>
+        <RecipeListItem :recipe="recipe" />
       </li>
     </ul>
   </section>
@@ -13,7 +12,7 @@
 import { defineProps } from "vue";
 import type { Recipe } from "@/types";
 
-// import RecipeListItem from "./RecipeListItem.vue";
+import RecipeListItem from "./RecipeListItem.vue";
 
 const props = defineProps<{
   recipes: Recipe[];
