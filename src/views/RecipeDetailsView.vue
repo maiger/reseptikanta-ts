@@ -28,14 +28,14 @@
           </button>
         </div>
       </div>
-      <!-- <div class="recipe-info">
-        <RecipeIngredients
+      <div class="recipe-info">
+        <!-- <RecipeIngredients
           class="ingredients"
           :recipe="recipe"
           :servings="servings"
-        />
+        /> -->
         <RecipeInstructions class="instructions" :recipe="recipe" />
-      </div> -->
+      </div>
       <ul class="tags">
         <li v-for="tag in recipe.tags">
           <span class="tag">{{ tag.toUpperCase() }}</span>
@@ -52,7 +52,7 @@ import { useRoute } from "vue-router";
 import { ref } from "vue";
 
 // import RecipeIngredients from "../components/RecipeIngredients.vue";
-// import RecipeInstructions from "../components/RecipeInstructions.vue";
+import RecipeInstructions from "../components/RecipeInstructions.vue";
 
 import { BASE_IMAGE_PATH } from "@/assets/config.ts";
 
