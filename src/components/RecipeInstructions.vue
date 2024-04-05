@@ -23,8 +23,12 @@ const props = defineProps({
   },
 });
 
-const toggleComplete = (e) => {
-  e.target.closest(".instruction-step").classList.toggle("step-complete");
+const toggleComplete = (e: MouseEvent) => {
+  if (e.target) {
+    (e.target as HTMLElement)
+      .closest(".instruction-step")!
+      .classList.toggle("step-complete");
+  }
 };
 </script>
 

@@ -29,11 +29,11 @@
         </div>
       </div>
       <div class="recipe-info">
-        <!-- <RecipeIngredients
+        <RecipeIngredients
           class="ingredients"
           :recipe="recipe"
           :servings="servings"
-        /> -->
+        />
         <RecipeInstructions class="instructions" :recipe="recipe" />
       </div>
       <ul class="tags">
@@ -51,7 +51,7 @@ import { useRecipeStore } from "@/stores/recipes";
 import { useRoute } from "vue-router";
 import { ref } from "vue";
 
-// import RecipeIngredients from "../components/RecipeIngredients.vue";
+import RecipeIngredients from "../components/RecipeIngredients.vue";
 import RecipeInstructions from "../components/RecipeInstructions.vue";
 
 import { BASE_IMAGE_PATH } from "@/assets/config.ts";
